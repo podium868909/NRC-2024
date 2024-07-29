@@ -3,6 +3,7 @@ from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, ColorSensor
 from pybricks.parameters import Port, Direction
 from pybricks.tools import wait, StopWatch
+import os
 
 ev3 = EV3Brick()
 lm = Motor(Port.B, Direction.CLOCKWISE)

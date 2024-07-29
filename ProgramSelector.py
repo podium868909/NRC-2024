@@ -5,6 +5,7 @@ from pybricks.media.ev3dev import SoundFile
 from pybricks.parameters import Button
 from pybricks.tools import StopWatch
 from functions import robot
+import os
 
 run_options = ["Run 1", "Run 2", "Run 3", "Run 4", "Run 5", "Run 6", "Run 7", "Run 8", "Run 9", "Run 10"]
 current = 0
